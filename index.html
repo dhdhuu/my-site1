@@ -30,15 +30,7 @@
 
         /* 스크롤 박스 */
         .scroll-box {
-            width: 100%;           /* 화면 폭에 맞춤 */
-            max-width: 600px;      /* 최대 폭 지정 (원하면 제거 가능) */
-            height: 100vh;         /* 화면 높이에 맞춤 */
-            overflow-y: scroll;    /* 세로 스크롤만 */
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #fff;
-        }
-        .scroll-box {
+            position: relative; /* 버튼 절대 위치를 위해 필요 */
             width: 100%;
             max-width: 600px;
             height: 100vh;
@@ -46,8 +38,9 @@
             border: 1px solid #ccc;
             border-radius: 10px;
             background-color: #fff;
-            padding-top: 10px; /* 위쪽 여백 추가 */
+            padding-top: 10px;
         }
+
         /* 이미지 */
         .scroll-box img {
             width: 100%;          /* 부모 폭에 맞춤 */
@@ -55,12 +48,32 @@
             display: block;
             margin-top: -10px;    /* 조금 위로 올리기 */
         }
+
+        /* 투명 버튼 */
+        .button {
+            position: absolute;
+            display: block;
+            background: transparent; /* 투명 */
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 버튼 위치 (가로 860px, 세로 300px 기준) */
+        .button1 {
+            left: 860px;
+            top: 300px;
+            width: 100px;  /* 버튼 너비 */
+            height: 50px;  /* 버튼 높이 */
+        }
     </style>
 </head>
 <body>
 
     <div class="scroll-box">
         <img src="assets/main.png" alt="scroll image">
+
+        <!-- 투명 버튼 추가 -->
+        <a href="second.html" class="button button1"></a>
     </div>
 
 </body>
