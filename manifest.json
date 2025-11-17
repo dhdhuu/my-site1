@@ -1,15 +1,20 @@
 {
-  "start_url": "./",
-  "name": "My App",
-  "short_name": "MyApp",
-  "start_url": "/",
+  "name": "my-site1",
+  "short_name": "my-site1",
+  "start_url": "/my-site1/",
+  "scope": "/my-site1/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/my-site1/icon-192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/my-site1/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
