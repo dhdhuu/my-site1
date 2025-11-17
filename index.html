@@ -38,13 +38,22 @@
             border-radius: 10px;
             background-color: #fff;
         }
-
+        .scroll-box {
+            width: 100%;
+            max-width: 600px;
+            height: 100vh;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            padding-top: 10px; /* 위쪽 여백 추가 */
+        }
         /* 이미지 */
         .scroll-box img {
             width: 100%;          /* 부모 폭에 맞춤 */
             height: auto;         /* 비율 유지 */
             display: block;
-            margin-top: -10px;    /* 조금 위로 올리기 */
+                /* 조금 위로 올리기 */
         }
     </style>
 </head>
