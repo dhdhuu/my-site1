@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll Image</title>
 
-    <!-- PWA 관련 메타/아이콘 -->
+    <!-- PWA 메타,아이콘 -->
     <link rel="manifest" href="/my-site1/manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -13,14 +13,14 @@
 
     <!-- CSS -->
     <style>
-        /* 페이지 기본 세팅 */
+        /* 페이지 기본 */
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            overflow-x: hidden; /* 가로 스크롤 제거 */
+            overflow-x: hidden; /* 가로 스크롤x */
             display: flex;
             justify-content: center;
             padding: 0;
@@ -28,9 +28,9 @@
             min-height: 100vh;
         }
 
-        /* 스크롤 박스 */
+        
         .scroll-box {
-            position: relative; /* 버튼 절대 위치를 위해 필요 */
+            position: relative; /* 버튼 절대 위치필료 */
             width: 100%;
             max-width: 600px;
             height: 100vh;
@@ -43,22 +43,22 @@
 
         /* 이미지 */
         .scroll-box img {
-            width: 100%;          /* 부모 폭에 맞춤 */
+            width: 100%;          /* 부모 폭 */
             height: auto;         /* 비율 유지 */
             display: block;
-            margin-top: -10px;    /* 조금 위로 올리기 */
+            margin-top: -10px;    
         }
 
         /* 투명 버튼 */
         .button {
             position: absolute;
             display: block;
-            background: rgba(255,0,0,0.3); /* 테스트용 반투명 */
+            background: rgba(255,0,0,0.3); /* 반투명 */
             border: 1px solid red;
             cursor: pointer;
         }
 
-        /* 첫 번째 버튼 */
+        /* 1버튼 */
         .button1 {
             left: 30px;
             top: 415px;
@@ -66,12 +66,12 @@
             height: 60px;  
         }
 
-        /* 두 번째 버튼 */
+        /* 2버튼 */
         .button2 {
-            left: 280px;  /* 새 버튼 가로 위치 */
-            top: 415px;   /* 새 버튼 세로 위치 */
-            width: 250px; /* 버튼 너비 */
-            height: 60px; /* 버튼 높이 */
+            left: 320px;  
+            top: 415px; 
+            width: 250px;
+            height: 60px;
         }
     </style>
 </head>
@@ -80,10 +80,10 @@
     <div class="scroll-box">
         <img src="assets/main.png" alt="scroll image">
 
-        <!-- 첫 번째 버튼 -->
+        <!--1버튼 -->
         <a href="toji.html" class="button button1"></a>
 
-        <!-- 두 번째 버튼 -->
+        <!--2 버튼 -->
         <a href="car.html" class="button button2"></a>
     </div>
 
