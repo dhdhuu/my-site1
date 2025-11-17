@@ -1,41 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>내 Thunkable 웹앱</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    .screen { display: none; padding: 20px; }
-    .active { display: block; }
-    button { margin: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
-    img { max-width: 100%; height: auto; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Image</title>
+
+    <style>
+        .scroll-box {
+            width: 400px;         /* 원하는 가로 크기 */
+            height: 800px;        /* 보여줄 높이 (여기만 보이고 나머지는 스크롤) */
+            overflow-y: scroll;   /* 세로 스크롤 */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 100%;          /* 박스에 맞게 이미지 크기 조절 */
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- 화면 1 -->
-  <div id="screen1" class="screen active">
-    <h1>Screen 1</h1>
-    <img src="https://via.placeholder.com/300x200.png?text=Screen1+Image" alt="Screen1 Image">
-    <p>여기는 첫 번째 화면입니다.</p>
-    <button onclick="goToScreen('screen2')">Next → Screen 2</button>
-  </div>
+    <div class="scroll-box">
+        <img src="<img src="assets/img/maini.png">" alt="scroll image">
+    </div>
 
-  <!-- 화면 2 -->
-  <div id="screen2" class="screen">
-    <h1>Screen 2</h1>
-    <img src="https://via.placeholder.com/300x200.png?text=Screen2+Image" alt="Screen2 Image">
-    <p>여기는 두 번째 화면입니다.</p>
-    <button onclick="goToScreen('screen1')">← Back to Screen 1</button>
-  </div>
-
-  <script>
-    function goToScreen(screenId) {
-      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-      document.getElementById(screenId).classList.add('active');
-    }
-  </script>
+</body>
+</html>
 
 </body>
 </html>
