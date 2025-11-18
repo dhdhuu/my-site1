@@ -118,7 +118,11 @@
         <a href="car.html" class="button button3"></a>
 
         <a href="gun.html" class="button button4"></a>
+        
         <a href="javascript:void(0)" class="button buttonmore" onclick="changeImage('assets/more.png')"></a>
+        <a href="javascript:void(0)" id="buttonmore" class="button buttonmore" onclick="showMore()"></a>
+        <a href="javascript:void(0)" id="moreback" class="button buttonmore" style="display:none;" onclick="showMain()"></a>
+
 
         
         
@@ -126,11 +130,22 @@
         
     </div>
 
-    <script>
-    function changeImage(src) {
-        document.querySelector('.scroll-box img').src = src;
-        el.style.pointerEvents = 'none';   // 클릭 막기
-        el.style.opacity = '0.5'; 
+   <script>
+    function showMore() {
+    // 이미지 변경
+        document.querySelector('.scroll-box img').src = 'assets/more.png';
+    // buttonmore 숨기고 moreback 보이기
+        document.getElementById('buttonmore').style.display = 'block'; // 기존 buttonmore는 ID 기준
+        document.getElementById('moreback').style.display = 'block';
+        document.querySelector('.button.buttonmore').style.display = 'none'; // 클릭한 buttonmore 숨기기
+    }
+
+    function showMain() {
+    // 이미지 원래대로
+        document.querySelector('.scroll-box img').src = 'assets/main.png';
+    // 버튼 전환
+        document.getElementById('buttonmore').style.display = 'block'; // buttonmore 다시 보이게
+        document.getElementById('moreback').style.display = 'none'; // moreback 숨기기
     }
     </script>
 
