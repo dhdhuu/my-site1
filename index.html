@@ -133,19 +133,18 @@
    <script>
     function showMore() {
     // 이미지 변경
-        document.querySelector('.scroll-box img').src = 'assets/more.png';
-    // buttonmore 숨기고 moreback 보이기
-        document.getElementById('buttonmore').style.display = 'block'; // 기존 buttonmore는 ID 기준
-        document.getElementById('moreback').style.display = 'block';
-        document.querySelector('.button.buttonmore').style.display = 'none'; // 클릭한 buttonmore 숨기기
+        document.getElementById('main-image').src = 'assets/more.png';
+    // 버튼 전환
+        document.getElementById('buttonmore').style.display = 'none'; // 클릭한 버튼 숨김
+        document.getElementById('moreback').style.display = 'block';  // 돌아가기 버튼 표시
     }
 
     function showMain() {
     // 이미지 원래대로
-        document.querySelector('.scroll-box img').src = 'assets/main.png';
+        document.getElementById('main-image').src = 'assets/main.png';
     // 버튼 전환
         document.getElementById('buttonmore').style.display = 'block'; // buttonmore 다시 보이게
-        document.getElementById('moreback').style.display = 'none'; // moreback 숨기기
+        document.getElementById('moreback').style.display = 'none';    // moreback 숨김
     }
     </script>
 
