@@ -58,6 +58,13 @@
             cursor: pointer;
         }
 
+        .buttonmore {
+            left: 100px;
+            top: 400px;
+            width: 140px;  
+            height: 35px;  
+        }
+
         .button1 {
             left: 15px;
             top: 273px;
@@ -102,8 +109,17 @@
 
         <a href="gun.html" class="button button4"></a>
 
+        <div class="buttonmore" onclick="changeImage('assets/more.png')"></div>
+        
+        
         
     </div>
+
+    <script>
+    function changeImage(src) {
+        document.querySelector('.scroll-box img').src = src;
+    }
+    </script>
 
 </body>
 </html>
