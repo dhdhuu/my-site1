@@ -121,6 +121,8 @@
     <script>
     function changeImage(src) {
         document.querySelector('.scroll-box img').src = src;
+        el.style.pointerEvents = 'none';   // 클릭 막기
+        el.style.opacity = '0.5'; 
     }
     </script>
 
