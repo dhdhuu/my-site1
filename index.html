@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="manifest" href="manifest.json">
-    
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Scroll Image</title>
 
 <style>
@@ -36,11 +35,15 @@ body {
     padding-top: 10px;
 }
 
-.scroll-box img {
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.image-wrapper img {
     width: 100%;
     height: auto;
     display: block;
-    margin-top: -10px;
 }
 
 .button {
@@ -52,65 +55,49 @@ body {
     z-index: 10;
 }
 
-.button1 { left: 15px; top: 273px; width: 173px; height: 48px; }
-.button2 { left: 200px; top: 273px; width: 173px; height: 48px; }
-.button3 { left: 15px; top: 328px; width: 173px; height: 48px; }
-.button4 { left: 200px; top: 328px; width: 173px; height: 48px; }
+/* 버튼 위치를 이미지 대비 비율로 지정 */
+.button1 { left: 2.5%; top: 35%; width: 28%; height: 6%; }
+.button2 { left: 52%; top: 35%; width: 28%; height: 6%; }
+.button3 { left: 2.5%; top: 42%; width: 28%; height: 6%; }
+.button4 { left: 52%; top: 42%; width: 28%; height: 6%; }
 
-#buttonmore { left: 120px; top: 446px; width: 140px; height: 35px; }
-#moreback { left: 120px; top: 780px; width: 140px; height: 35px; display: none; }
+#buttonmore { left: 35%; top: 55%; width: 30%; height: 5%; }
+#moreback { left: 35%; top: 90%; width: 30%; height: 5%; display: none; }
+
+#searchInput {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 40px;
+    border: none;
+    background: transparent;
+    color: transparent;
+    caret-color: black;
+    z-index: 15;
+    outline: none;
+}
 </style>
 </head>
 <body>
 
 <div class="scroll-box">
-    <!-- <input type="text" id="searchInput" placeholder="ㅇㅇ"
-       style="
-       position: absolute;
-       top: 170px;   
-       left: 45%;
-       transform: translateX(-50%);
-       width: 80%;
-       padding: 8px 12px;
-       font-size: 16px;
-       border-radius: 20px;
-       border: none; 
-       background-color: rgba(255,255,255,0)
-       color: black;
-       outline: none;
-       z-index: 15;
-       "> -->
-    <input type="text" id="searchInput"
-       style="
-       position: absolute;
-       top: 170px;          
-       left: 45%;
-       transform: translateX(-50%);
-       width: 80%;
-       height: 40px;        
-       border: none;        
-       background: transparent; 
-       color: transparent;  
-       caret-color: black;  
-       z-index: 15;
-       outline: none;
-       ">
 
-   
-    
-    <img id="main-image" src="assets/main.png" alt="scroll image">
+    <div class="image-wrapper">
+        <input type="text" id="searchInput">
 
-    
-    <a href="toji.html" class="button button1"></a>
-    <a href="jumin.html" class="button button2"></a>
-    <a href="car.html" class="button button3"></a>
-    <a href="gun.html" class="button button4"></a>
+        <img id="main-image" src="assets/main.png" alt="scroll image">
 
-    
-    <a href="javascript:void(0)" id="buttonmore" class="button" onclick="showMore()"></a>
+        <a href="toji.html" class="button button1"></a>
+        <a href="jumin.html" class="button button2"></a>
+        <a href="car.html" class="button button3"></a>
+        <a href="gun.html" class="button button4"></a>
 
-    
-    <a href="javascript:void(0)" id="moreback" class="button" onclick="showMain()"></a>
+        <a href="javascript:void(0)" id="buttonmore" class="button" onclick="showMore()"></a>
+        <a href="javascript:void(0)" id="moreback" class="button" onclick="showMain()"></a>
+    </div>
+
 </div>
 
 <script>
