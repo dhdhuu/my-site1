@@ -39,6 +39,7 @@ body {
 .image-wrapper {
     position: relative;
     width: 100%;
+    height: auto;
 }
 
 .image-wrapper img {
@@ -76,8 +77,28 @@ body {
 
 #buttonmore { left: 36%; top: 30%; width: 26%; height: 2.4%; }
 #moreback { left: 36%; top: 44%; width: 26%; height: 2.4%; display: none; }
-    
+        
+.main-img, .more-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    transition: opacity 0.2s ease;
+}
 
+.more-img {
+    opacity: 0;
+}
+
+.show-more .main-img {
+    opacity: 0;
+}
+
+.show-more .more-img {
+    opacity: 1;
+}
+    
 /* #searchInput {
     position: absolute;
     top: 20%;
@@ -101,8 +122,10 @@ body {
     <div class="image-wrapper">
         <!-- <input type="text" id="searchInput"> -->
 
-        <img id="main-image" src="assets/main.png" alt="scroll image">
-
+        <!-- <img id="main-image" src="assets/main.png" alt="scroll image"> -->
+        <img class="main-img" src="assets/main.png" alt="">
+        <img class="more-img" src="assets/more.png" alt="">
+        
         <a href="toji.html" class="button button1"></a>
         <a href="jumin.html" class="button button2"></a>
         <a href="car.html" class="button button3"></a>
@@ -116,16 +139,17 @@ body {
 
 <script>
 function showMore() {
-    document.getElementById('main-image').src = 'assets/more.png';
+    document.querySelector('.image-wrapper').classList.add('show-more');
     document.getElementById('buttonmore').style.display = 'none';
     document.getElementById('moreback').style.display = 'block';
 }
 
 function showMain() {
-    document.getElementById('main-image').src = 'assets/main.png';
+    document.querySelector('.image-wrapper').classList.remove('show-more');
     document.getElementById('buttonmore').style.display = 'block';
     document.getElementById('moreback').style.display = 'none';
 }
+
 </script>
 
 </body>
