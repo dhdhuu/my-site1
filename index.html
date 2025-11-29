@@ -154,7 +154,7 @@ body {
 
         <div id="moreButtons" style="display:none;">
         <a href="toji.html" class="button" style="left:3.7%; top:56%; width:45%; height:3.1%;"></a>
-        
+        </div>
 
         <a href="javascript:void(0)" id="buttonmore" class="button" onclick="showMore()"></a>
         <a href="javascript:void(0)" id="moreback" class="button" onclick="showMain()"></a>
@@ -167,13 +167,18 @@ function showMore() {
     document.querySelector('.image-wrapper').classList.add('show-more');
     document.getElementById('buttonmore').style.display = 'none';
     document.getElementById('moreback').style.display = 'block';
+
+    document.getElementById('moreButtons').style.display = 'block';
 }
 
 function showMain() {
     document.querySelector('.image-wrapper').classList.remove('show-more');
     document.getElementById('buttonmore').style.display = 'block';
     document.getElementById('moreback').style.display = 'none';
+
+    document.getElementById('moreButtons').style.display = 'none';
 }
+
 
 </script>
 
